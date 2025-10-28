@@ -1,0 +1,11 @@
+name: Lodevator
+version: "0.1.0"
+main: me.haxx0r.lodevator.Lodevator
+api-version: "1.21.8"
+author: Haxx0r
+description: Simple server-side elevators for PaperMC
+
+permissions:
+  lodevator.reload:
+    description: Allows use of /lodevator reload
+    default: op

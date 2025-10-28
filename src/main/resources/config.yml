@@ -1,0 +1,22 @@
+# Lodevator Config
+
+# Available options: https://jd.papermc.io/paper/1.21.8/org/bukkit/Material.html
+material: LODESTONE
+# Available options: https://minecraft.wiki/w/Sounds.json#Sound_events (Java Edition, Sound Event column)
+trigger-sound: entity.enderman.teleport
+# Default trigger method for players to use lodevators (Options: MOVE, CLICK)
+default-trigger: CLICK
+
+# --- MESSAGE FORMATTING ---
+# (https://docs.papermc.io/adventure/minimessage/format/)
+# <curr_up>, <curr_down>: Current up/down triggers
+# <next_up>, <next_down>: Next up/down triggers
+# <block>: The block material used for lodevators
+# <playername>: The target player's name (when not the sender)
+messages:
+  check: "<hover:show_text:'<aqua>Click to toggle!'><click:run_command:/lodevator toggle><gray>Use <#00ff00><curr_up> to teleport up</#00ff00> and <#d81b60><curr_down> to teleport down</#d81b60> on <block> blocks. <aqua>Click this message to switch to <#00ff00><next_up></#00ff00>/<#d81b60><next_down></#d81b60>.</aqua></gray>"
+  check-other: "<gray><aqua><playername></aqua> is currently using <#00ff00><curr_up></#00ff00>/<#d81b60><curr_down></#d81b60> as their lodevator trigger.<gray>"
+  toggle: "<hover:show_text:'<aqua>Click to toggle!'><click:run_command:/lodevator toggle><gray>You are now using <#00ff00><curr_up> to teleport up</#00ff00> and <#d81b60><curr_down> to teleport down</#d81b60> on <block> blocks! <aqua>Click this message to switch to <#00ff00><next_up></#00ff00>/<#d81b60><next_down></#d81b60>.</aqua></gray>"
+  toggle-other: "<gray>Successfully toggled <aqua><playername></aqua>'s lodevator trigger to <#00ff00><curr_up></#00ff00>/<#d81b60><curr_down></#d81b60>.<gray>"
+  up-fail: "<red>No <block> block to teleport you up to. <curr_down> to teleport down instead.</red>"
+  down-fail: "<red>No <block> block to teleport you down to. <curr_up> to teleport up instead.</red>"

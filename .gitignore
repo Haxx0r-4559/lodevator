@@ -1,0 +1,12 @@
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+### Gradle ###
+.gradle
+build
+run
+
+temp
